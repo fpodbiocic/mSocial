@@ -4,12 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using mTwitter.API.Extensions;
+using mTwitter.API.Models.DatabaseModels.mTwitter;
+using mTwitter.API.Services;
 
 namespace mTwitter.API
 {
@@ -25,6 +30,28 @@ namespace mTwitter.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // ------------------------------------------------------------------------
+            // DB connection strings
+
+            // mTwitter database
+            services.AddDbContext<mTwitterContext>(options => options.UseSqlServer(Configuration.GetConnectionString("mTwitterDatabase")));
+
+            // ------------------------------------------------------------------------
+
+            // ------------------------------------------------------------------------
+            // CORS service
+
+            services.ConfigureCors();
+
+            // ------------------------------------------------------------------------
+
+            // ------------------------------------------------------------------------
+            // Repository pattern
+
+            services.AddScoped<ImTwitterRepository, mTwitterRepository>();
+
+            // ------------------------------------------------------------------------
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -42,6 +69,12 @@ namespace mTwitter.API
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("CorsPolicy");
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.All
+            });
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }
