@@ -46,9 +46,16 @@ namespace mTwitter.API
             // ------------------------------------------------------------------------
 
             // ------------------------------------------------------------------------
-            // Repository pattern
+            // Repository service
 
-            services.AddScoped<ImTwitterRepository, mTwitterRepository>();
+            services.AddScoped<IPostService, PostService>();
+
+            // ------------------------------------------------------------------------
+
+            // ------------------------------------------------------------------------
+            // Logger factory service
+
+            services.AddSingleton<ILoggerFactory, LoggerFactory>();
 
             // ------------------------------------------------------------------------
 
@@ -56,7 +63,7 @@ namespace mTwitter.API
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {

@@ -13,9 +13,9 @@ namespace mTwitter.API.Controllers
     [Route("api/[controller]")]
     public class PostsController : ControllerBase
     {
-        private readonly ImTwitterRepository _repository;
+        private readonly IPostService _repository;
 
-        public PostsController(ImTwitterRepository repository)
+        public PostsController(IPostService repository)
         {
             _repository = repository;
         }
@@ -65,6 +65,13 @@ namespace mTwitter.API.Controllers
             if(post == null)
             {
                 return BadRequest();
+            }
+
+            // Model state is a Dictionary - the property IsValid will be false if the requirements on the PostPostDTO are not met
+            if (!ModelState.IsValid)
+            {
+                // return 422
+                return new UnprocessableEntityObjectResult(ModelState);
             }
 
             PostDTO pdto = _repository.AddPost(ownerId, post);

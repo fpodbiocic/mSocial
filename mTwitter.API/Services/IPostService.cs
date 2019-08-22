@@ -6,7 +6,7 @@ using static mTwitter.API.Models.PostModel;
 
 namespace mTwitter.API.Services
 {
-    public interface ImTwitterRepository
+    public interface IPostService
     {
         IEnumerable<PostDTO> GetPosts();
         PostDTO GetPost(Guid id);

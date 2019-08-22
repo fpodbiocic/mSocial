@@ -8,11 +8,11 @@ using static mTwitter.API.Models.PostModel;
 
 namespace mTwitter.API.Services
 {
-    public class mTwitterRepository : ImTwitterRepository
+    public class PostService : IPostService
     {
         private readonly mTwitterContext _context;
 
-        public mTwitterRepository(mTwitterContext context)
+        public PostService(mTwitterContext context)
         {
             _context = context;
         }
