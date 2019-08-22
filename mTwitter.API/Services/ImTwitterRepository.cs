@@ -9,5 +9,11 @@ namespace mTwitter.API.Services
     public interface ImTwitterRepository
     {
         IEnumerable<PostDTO> GetPosts();
+        PostDTO GetPost(Guid id);
+        PostDTO GetPost(Guid ownerId, Guid id);
+        IEnumerable<PostDTO> GetPostsByOwnerId(Guid ownerId);
+        PostDTO AddPost(Guid ownerId, PostPostDTO post);
+        void DeletePost(PostDTO post);
+        bool Save();
     }
 }

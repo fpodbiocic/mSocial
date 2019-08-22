@@ -21,7 +21,6 @@ namespace mTwitter.API.Models
         public class PostPostDTO
         {
             public string Body { get; set; }
-            public Guid OwnerId { get; set; }
         }
     }
 }
