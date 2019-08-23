@@ -13,17 +13,17 @@ namespace mTwitter.API.Controllers
     [Route("api/[controller]")]
     public class PostsController : ControllerBase
     {
-        private readonly IPostService _repository;
+        private readonly IPostService _postService;
 
-        public PostsController(IPostService repository)
+        public PostsController(IPostService postService)
         {
-            _repository = repository;
+            _postService = postService;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            IEnumerable<PostDTO> posts = _repository.GetPosts();
+            IEnumerable<PostDTO> posts = _postService.GetPosts();
 
             if (posts == null)
             {
@@ -36,7 +36,7 @@ namespace mTwitter.API.Controllers
         [HttpGet("{id}", Name = "GetPost")]
         public IActionResult Get(Guid id)
         {
-            PostDTO post = _repository.GetPost(id);
+            PostDTO post = _postService.GetPost(id);
 
             if (post == null)
             {
@@ -49,7 +49,7 @@ namespace mTwitter.API.Controllers
         [HttpGet("ByOwnerId/{ownerId}")]
         public IActionResult GetPostsByOwnerId(Guid ownerId)
         {
-            IEnumerable<PostDTO> posts = _repository.GetPostsByOwnerId(ownerId);
+            IEnumerable<PostDTO> posts = _postService.GetPostsByOwnerId(ownerId);
 
             if (posts == null)
             {
@@ -74,9 +74,9 @@ namespace mTwitter.API.Controllers
                 return new UnprocessableEntityObjectResult(ModelState);
             }
 
-            PostDTO pdto = _repository.AddPost(ownerId, post);
+            PostDTO pdto = _postService.AddPost(ownerId, post);
 
-            if (!_repository.Save())
+            if (!_postService.Save())
             {
                 return StatusCode(500);
             }
@@ -87,14 +87,14 @@ namespace mTwitter.API.Controllers
         [HttpDelete("{ownerId}/{id}")]
         public IActionResult Delete(Guid ownerId, Guid id)
         {
-            PostDTO pdto = _repository.GetPost(ownerId, id);
+            PostDTO pdto = _postService.GetPost(ownerId, id);
 
             if(pdto == null)
             {
                 return NotFound();
             }
 
-            _repository.DeletePost(pdto);
+            _postService.DeletePost(pdto);
 
             return NoContent();
         }
