@@ -1,6 +1,6 @@
 ﻿Scaffold-DbContext 'Server=devdb.westeurope.cloudapp.azure.com;Database=marko_test2;User Id=marko2;Password=2Q3fBXHSya4rNz' Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models/DatabaseModels/mTwitter -context "mTwitterContext" -Force
 
 var appSettingsJson = AppsettingsJson.GetAppSettings();
-var connectionString = appSettingsJson["ConnectionStrings:DefaultConnection"];
+var connectionString = appSettingsJson["ConnectionStrings:mTwitterDatabase"];
 
 optionsBuilder.UseSqlServer(connectionString);
