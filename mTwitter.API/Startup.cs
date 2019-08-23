@@ -49,6 +49,7 @@ namespace mTwitter.API
             // Repository service
 
             services.AddScoped<IPostService, PostService>();
+            services.AddScoped<IUserService, UserService>();
 
             // ------------------------------------------------------------------------
 
@@ -56,6 +57,7 @@ namespace mTwitter.API
             // Logger factory service
 
             services.AddSingleton<ILoggerFactory, LoggerFactory>();
+            services.AddSingleton(typeof(ILogger<>), typeof(Logger<>)).AddOptions();
 
             // ------------------------------------------------------------------------
 

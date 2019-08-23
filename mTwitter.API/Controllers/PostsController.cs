@@ -21,7 +21,7 @@ namespace mTwitter.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult GetPosts()
         {
             IEnumerable<PostDTO> posts = _postService.GetPosts();
 
@@ -34,7 +34,7 @@ namespace mTwitter.API.Controllers
         }
 
         [HttpGet("{id}", Name = "GetPost")]
-        public IActionResult Get(Guid id)
+        public IActionResult GetPost(Guid id)
         {
             PostDTO post = _postService.GetPost(id);
 
@@ -60,7 +60,7 @@ namespace mTwitter.API.Controllers
         }
 
         [HttpPost("{ownerId}")]
-        public IActionResult Post(Guid ownerId, [FromBody] PostPostDTO post)
+        public IActionResult AddPost(Guid ownerId, [FromBody] PostPostDTO post)
         {
             if(post == null)
             {
@@ -85,7 +85,7 @@ namespace mTwitter.API.Controllers
         }
 
         [HttpDelete("{ownerId}/{id}")]
-        public IActionResult Delete(Guid ownerId, Guid id)
+        public IActionResult DeletePost(Guid ownerId, Guid id)
         {
             PostDTO pdto = _postService.GetPost(ownerId, id);
 

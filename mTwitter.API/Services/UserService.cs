@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace mTwitter.API.Services
 {
-    public class UserService
+    public class UserService : IUserService
     {
     }
 }

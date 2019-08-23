@@ -9,6 +9,8 @@ namespace mTwitter.API.Models
 {
     public class AppsettingsJson
     {
+        public string Secret { get; set; }
+
         public static string ApplicationExeDirectory()
         {
             var location = System.Reflection.Assembly.GetExecutingAssembly().Location;
