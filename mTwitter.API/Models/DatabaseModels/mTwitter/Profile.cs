@@ -20,5 +20,8 @@ namespace mTwitter.API.Models.DatabaseModels.mTwitter
         public string ModifiedBy { get; set; }
         public DateTime CreatedOn { get; set; }
         public string CreatedBy { get; set; }
+        public Guid UserId { get; set; }
+
+        public virtual ApplicationUser User { get; set; }
     }
 }
