@@ -12,8 +12,8 @@ using Microsoft.IdentityModel.Tokens;
 using mTwitter.API.Models;
 using mTwitter.API.Helpers;
 using mTwitter.API.Services;
-using static mTwitter.API.Models.UserModel;
 using System.IdentityModel.Tokens.Jwt;
+using static mTwitter.API.Models.UserModel;
 
 namespace mTwitter.API.Controllers
 {
@@ -70,8 +70,7 @@ namespace mTwitter.API.Controllers
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();
-            //var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
-            var key = Encoding.ASCII.GetBytes("This is my secret brah");
+            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor()
             {
                 Subject = new ClaimsIdentity(new Claim[]
