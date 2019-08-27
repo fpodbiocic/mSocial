@@ -58,7 +58,7 @@
 
 <script>
     import jwt_decode from "jwt-decode";
-    import Footer from "../components/Landing/Footer.vue";
+    import Footer from "../components/landing/Footer.vue";
 
     export default {
         name: "Landing",
@@ -154,7 +154,6 @@
         height: 100vh;
     }
 
-    
 
     /* MEDIA QUERIES - LANDING */
 

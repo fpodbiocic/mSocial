@@ -1,9 +1,9 @@
 ﻿// Mutations
-import { FETCH_POSTS, FETCH_POST } from "../mutations/posts-mutations";
+import { SET_POSTS, SET_POST } from "../mutations/posts-mutations";
 
 const state = {
     post: {},
-    posts: [],
+    posts: []
 };
 
 // In Vuex, mutations are synchronous transactions:
@@ -13,8 +13,8 @@ const state = {
 // to use a constant as the function name
 const mutations = {
     
-    [FETCH_POSTS](state) {
-
+    [SET_POSTS](state, payload) {
+        state.posts = payload;
     }
 };
 
@@ -25,7 +25,20 @@ const mutations = {
 // Actions are triggered with the store.dispatch method
 const actions = {
     fetchPosts: function (context) {
-        console.log(context);
+
+        return new Promise((resolve, reject) => {
+
+            fetch('/api/Posts')
+                .then(response => response.json())
+                .then(data => {
+                    let payload = data;
+                    context.commit(SET_POSTS, payload);
+                    resolve();
+                })
+                .catch(error => reject(error));
+
+        });
+
     }
 };
 

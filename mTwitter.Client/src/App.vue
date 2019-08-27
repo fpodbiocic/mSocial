@@ -19,14 +19,24 @@
 
     /*  */
     :root {
+        --max-width: 1250px;
         --primary-color: #1da1f2;
-        --light-color : #fff;
+        --light-color: #fff;
         --dark-color: #000;
+        --btn-secondary-hover: rgba(29, 161, 242, 0.1);
+        --btn-primary-hover: #1b95e0;
     }
     /*----------------------------*/
 
     body {
         font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 0.8rem 1rem;
     }
 
     /* TEXT STYLES  */
@@ -122,8 +132,7 @@
     }
 
     .btn-secondary-sm:hover, .btn-secondary-md:hover {
-        background: black;
-        background: rgba(29, 161, 242, 0.1);
+        background: var(--btn-secondary-hover);
     }
 
     .btn-primary-md {
@@ -147,7 +156,7 @@
     }
 
     .btn-primary-md:hover {
-        background: #1b95e0;
+        background: var(--btn-primary-hover);
     }
     /*--------------------------------*/
 
