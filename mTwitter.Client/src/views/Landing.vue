@@ -32,9 +32,9 @@
             </div>
             <div class="landing-right">
                 <div class="landing-right-login">
-                    <form id="landing-login">
-                        <input type="email" placeholder="Email">
-                        <input type="password" placeholder="Password">
+                    <form id="landing-login" v-on:submit="onSubmit">
+                        <input type="email" placeholder="Email" v-model="email">
+                        <input type="password" placeholder="Password" v-model="password">
                         <button type="submit" id="btnLandingLogin" class="btn btn-secondary-sm mx-05">Log in</button>
                     </form>
                 </div>
@@ -51,18 +51,35 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <span>&copy; 2019 Twitter</span>
-        </footer>
+        <Footer />
     </div>
         
 </template>
 
 <script>
+    import jwt_decode from "jwt-decode";
+    import Footer from "../components/Landing/Footer.vue";
+
     export default {
         name: "Landing",
+        components: {
+            Footer: Footer
+        },
         data() {
             return {
+                email: "",
+                password: ""
+            }
+        },
+        methods: {
+            onSubmit: function (e) {
+
+                e.preventDefault();
+
+                const data = {
+                    email: this.email,
+                    password: this.password
+                }
 
             }
         }
@@ -137,16 +154,7 @@
         height: 100vh;
     }
 
-    footer {
-        background: var(--ligth-color);
-        text-align: center;
-        padding: .6rem 0;
-    }
-
-    footer span {
-        font-size: 0.8rem;
-        color: #c5b8cc;
-    }
+    
 
     /* MEDIA QUERIES - LANDING */
 
