@@ -1,41 +1,44 @@
 ﻿<template>
     <div id="navigation">
         <ul class="nav">
-            <li class="nav-link">
-                <router-link to="/home" class="nav-link-item">
-                    <div class="logo">
-                        <i class="fab fa-twitter"></i>
-                    </div>
+            <li class="nav-item">
+                <router-link to="/home" class="nav-item-link logo">
+                    <i class="fab fa-twitter fa-2x"></i>
                 </router-link>
             </li>
-            <li class="nav-link">
-                <router-link to="/home" class="nav-link-item">
-                    <div class="nav-link-item-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <div class="nav-link-item-text">
-                        Home
-                    </div>
+            <li class="nav-item">
+                <router-link to="/home" class="nav-item-link">
+                    <i class="fas fa-home"></i> Home
                 </router-link>
             </li>
-            <li class="nav-link">
-                <router-link to="/explore" class="nav-link-item">
-                    <div class="nav-link-item-icon">
-                        <i class="fas fa-hashtag"></i>
-                    </div>
-                    <div class="nav-link-item-text">
-                        Explore
-                    </div>
+            <li class="nav-item">
+                <router-link to="/notification" class="nav-item-link">
+                    <i class="far fa-bell"></i> Notifications
                 </router-link>
             </li>
-            <li class="nav-link">
-                <router-link to="/notifications" class="nav-link-item">
-                    <div class="nav-link-item-icon">
-                        <i class="far fa-bell"></i>
-                    </div>
-                    <div class="nav-link-item-text">
-                        Notifications
-                    </div>
+            <li class="nav-item">
+                <router-link to="/home" class="nav-item-link">
+                    <i class="fas fa-hashtag"></i> Explore
+                </router-link>
+            </li>
+            <li class="nav-item">
+                <router-link to="/home" class="nav-item-link">
+                    <i class="fas fa-hashtag"></i> Explore
+                </router-link>
+            </li>
+            <li class="nav-item">
+                <router-link to="/home" class="nav-item-link">
+                    <i class="fas fa-hashtag"></i> Explore
+                </router-link>
+            </li>
+            <li class="nav-item">
+                <router-link to="/home" class="nav-item-link">
+                    <i class="fas fa-hashtag"></i> Explore
+                </router-link>
+            </li>
+            <li class="nav-item">
+                <router-link to="/home" class="nav-item-link">
+                    <i class="fas fa-hashtag"></i> Explore
                 </router-link>
             </li>
         </ul>
@@ -50,47 +53,35 @@
 
 <style scoped>
     #navigation {
-
+        width: 20%;
+        border: 1px solid black;
     }
 
     #navigation .nav {
-
     }
 
-    #navigation .nav .nav-link-logo {
+    #navigation .nav .nav-item {
         text-decoration: none;
         list-style-type: none;
-        padding: 0 0 2.3rem 0;
-        transition: all .5s;
-
-    }
-
-    #navigation .nav .nav-link {
-        text-decoration: none;
-        list-style-type: none;
-        padding: 0 0 2rem 0;
+        border: 1px solid black;
+        float: left;
+        clear: both;
+        padding: .5rem;
         transition: all .5s;
     }
 
-    #navigation .nav .nav-link .nav-link-item {
-        display: flex;
+    #navigation .nav .nav-item:hover {
+        background: var(--btn-secondary-hover);
+        border-radius: 25px;
+    }
+
+    #navigation .nav .nav-item .nav-item-link {
         text-decoration: none;
-        color: var(--dark-color);
-    }
 
-    #navigation .nav .nav-link .nav-link-item .nav-link-item-icon {
-        font-size: 1.4rem;
-    }
-
-    #navigation .nav .nav-link .nav-link-item .nav-link-item-text {
-        padding-left: 1.7rem;
-        font-size: 1.2rem;
-        font-weight: bold;
-        align-self: flex-end;
     }
 
     .logo {
-        font-size: 1.7rem;
-        color: var(--primary-color)
+        color: var(--primary-color);
+        display: inline-block;
     }
 </style>

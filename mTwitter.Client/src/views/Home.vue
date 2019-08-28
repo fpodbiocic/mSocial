@@ -11,13 +11,13 @@
     import { mapState } from "vuex";
 
     // components
-    import Post from "../components/home/Navigation.vue";
+    import Posts from "../components/home/Posts.vue";
     import Navigation from "../components/home/Navigation.vue";
 
     export default {
         name: 'Home',
         components: {
-            Post: Post,
+            Posts: Posts,
             Navigation: Navigation
         },
         data() {

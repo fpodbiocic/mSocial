@@ -19,7 +19,7 @@
 
     /*  */
     :root {
-        --max-width: 1250px;
+        --max-width: 1280px;
         --primary-color: #1da1f2;
         --light-color: #fff;
         --dark-color: #000;
