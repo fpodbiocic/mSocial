@@ -1,45 +1,53 @@
 ﻿<template>
     <div id="navigation">
         <ul class="nav">
-            <li class="nav-item">
-                <router-link to="/home" class="nav-item-link logo">
-                    <i class="fab fa-twitter fa-2x"></i>
+            <li class="nav-item-logo">
+                <router-link to="/home" class="nav-item-link-logo">
+                    <i class="fab fa-twitter"></i> 
                 </router-link>
             </li>
             <li class="nav-item">
                 <router-link to="/home" class="nav-item-link">
-                    <i class="fas fa-home"></i> Home
+                    <i class="fas fa-home"></i> <span class="nav-item-link-text">Home</span>
+                </router-link>
+            </li>
+            <li class="nav-item">
+                <router-link to="/explore" class="nav-item-link">
+                    <i class="fas fa-hashtag"></i> <span class="nav-item-link-text">Explore</span>
                 </router-link>
             </li>
             <li class="nav-item">
                 <router-link to="/notification" class="nav-item-link">
-                    <i class="far fa-bell"></i> Notifications
+                    <i class="far fa-bell"></i> <span class="nav-item-link-text">Notifications</span>
                 </router-link>
             </li>
             <li class="nav-item">
-                <router-link to="/home" class="nav-item-link">
-                    <i class="fas fa-hashtag"></i> Explore
+                <router-link to="/messages" class="nav-item-link">
+                    <i class="far fa-envelope"></i> <span class="nav-item-link-text">Messages</span>
                 </router-link>
             </li>
             <li class="nav-item">
-                <router-link to="/home" class="nav-item-link">
-                    <i class="fas fa-hashtag"></i> Explore
+                <router-link to="/bookmarks" class="nav-item-link">
+                    <i class="far fa-bookmark"></i> <span class="nav-item-link-text">Bookmarks</span>
                 </router-link>
             </li>
             <li class="nav-item">
-                <router-link to="/home" class="nav-item-link">
-                    <i class="fas fa-hashtag"></i> Explore
+                <router-link to="/lists" class="nav-item-link">
+                    <i class="fas fa-stream"></i> <span class="nav-item-link-text">Lists</span>
                 </router-link>
             </li>
             <li class="nav-item">
-                <router-link to="/home" class="nav-item-link">
-                    <i class="fas fa-hashtag"></i> Explore
+                <router-link to="/profile" class="nav-item-link">
+                    <i class="far fa-user"></i> <span class="nav-item-link-text">Profile</span>
                 </router-link>
             </li>
             <li class="nav-item">
-                <router-link to="/home" class="nav-item-link">
-                    <i class="fas fa-hashtag"></i> Explore
+                <router-link to="/more" class="nav-item-link">
+                    <i class="fas fa-ellipsis-h"></i> <span class="nav-item-link-text">More</span>
                 </router-link>
+            </li>
+            <li class="nav-item">
+                <button>Tweet</button>
             </li>
         </ul>
     </div>
@@ -54,34 +62,6 @@
 <style scoped>
     #navigation {
         width: 20%;
-        border: 1px solid black;
     }
 
-    #navigation .nav {
-    }
-
-    #navigation .nav .nav-item {
-        text-decoration: none;
-        list-style-type: none;
-        border: 1px solid black;
-        float: left;
-        clear: both;
-        padding: .5rem;
-        transition: all .5s;
-    }
-
-    #navigation .nav .nav-item:hover {
-        background: var(--btn-secondary-hover);
-        border-radius: 25px;
-    }
-
-    #navigation .nav .nav-item .nav-item-link {
-        text-decoration: none;
-
-    }
-
-    .logo {
-        color: var(--primary-color);
-        display: inline-block;
-    }
 </style>

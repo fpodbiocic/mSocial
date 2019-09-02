@@ -1,8 +1,9 @@
 ﻿<template>
-    <div id="home">
-        <div class="container">
-            <Navigation/>
-            <loader v-bind:loading="loading" v-bind:color="loaderColor" v-bind:size="loaderSize"></loader>
+    <div class="container">
+        <div id="home">
+            <Navigation />
+            <Posts />
+            <!--<loader v-bind:loading="loading" v-bind:color="loaderColor" v-bind:size="loaderSize"></loader>-->
         </div>
     </div>
 </template>
@@ -60,6 +61,6 @@
 
 <style scoped>
     #home{
-        
+        display: flex;
     }
 </style>

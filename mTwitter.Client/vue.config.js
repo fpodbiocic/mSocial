@@ -2,7 +2,7 @@
     devServer: {
         proxy: {
             '^/api': {
-                target: 'https://localhost:44341',
+                target: 'https://localhost:5001',
                 ws: true,
                 changeOrigin: true
             }
