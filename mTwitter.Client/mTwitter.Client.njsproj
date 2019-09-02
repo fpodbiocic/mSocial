@@ -35,6 +35,21 @@
     <Content Include="src\App.vue" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="src\components\home\Navigation.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\Home\Post.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\home\Posts.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\Landing\Footer.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\Home.vue">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\views\Landing.vue">
       <SubType>Code</SubType>
     </Content>
@@ -45,6 +60,11 @@
     <Folder Include="src\" />
     <Folder Include="src\assets\" />
     <Folder Include="src\components\" />
+    <Folder Include="src\components\landing\" />
+    <Folder Include="src\components\home\" />
+    <Folder Include="src\store\" />
+    <Folder Include="src\store\modules\" />
+    <Folder Include="src\store\mutations\" />
     <Folder Include="src\views\" />
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +74,21 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\security.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\store\index.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\store\modules\auth.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\store\modules\posts.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\store\mutations\auth-mutations.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\store\mutations\posts-mutations.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="vue.config.js">
