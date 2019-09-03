@@ -61,6 +61,7 @@
 
 <style scoped>
     #home{
-        display: flex;
+       display: flex;
+       border: 1px solid black;
     }
 </style>

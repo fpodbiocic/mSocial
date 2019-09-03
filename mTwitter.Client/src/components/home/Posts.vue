@@ -11,4 +11,8 @@
 </script>
 
 <style scoped>
+    #posts {
+        border: 1px solid black;
+        width: 50%;
+    }
 </style>

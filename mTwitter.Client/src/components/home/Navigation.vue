@@ -46,8 +46,8 @@
                     <i class="fas fa-ellipsis-h"></i> <span class="nav-item-link-text">More</span>
                 </router-link>
             </li>
-            <li class="nav-item">
-                <button>Tweet</button>
+            <li class="nav-item-tweet">
+                <button class="">Tweet</button>
             </li>
         </ul>
     </div>
@@ -62,6 +62,45 @@
 <style scoped>
     #navigation {
         width: 20%;
+        border: 1px solid black;
+    }
+
+    .nav {
+        border: 1px solid black;
+    }
+
+    .nav .nav-item, .nav-item-logo, .nav-item-tweet {
+        float: left;
+        clear: both;
+        list-style-type: none;
+        transition: all 0.2s;
+    }
+
+    .nav .nav-item {
+        padding: 0.6rem;
+        border-radius: 50px;
+    }
+
+    .nav .nav-item-logo {
+        padding: 0.6rem;
+        border-radius: 50%;
+    }
+
+    .nav .nav-item-logo .nav-item-link-logo {
+        color: var(--primary-color);
+    }
+
+    .nav .nav-item:hover, .nav .nav-item-logo:hover {
+        background: var(--btn-secondary-hover);
+    }
+
+    .nav .nav-item .nav-item-link {
+        text-decoration: none;
+        color: var(--dark-color);
+    }
+
+    ul li .nav-item-link .nav-item-link-text {
+        margin-left: 1rem;
     }
 
 </style>
