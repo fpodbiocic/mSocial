@@ -145,6 +145,17 @@
         transition: all .2s;
     }
 
+    .btn-primary-sm {
+        background: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        color: var(--light-color);
+        padding: .9rem 5rem;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        transition: all .2s;
+    }
+
     .btn-secondary-md {
         background: var(--light-color);
         border: 1px solid var(--primary-color);
@@ -156,6 +167,10 @@
     }
 
     .btn-primary-md:hover {
+        background: var(--btn-primary-hover);
+    }
+
+    .btn-primary-sm:hover {
         background: var(--btn-primary-hover);
     }
     /*--------------------------------*/

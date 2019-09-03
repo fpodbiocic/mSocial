@@ -47,7 +47,7 @@
                 </router-link>
             </li>
             <li class="nav-item-tweet">
-                <button class="">Tweet</button>
+                <button class="btn btn-primary-sm">Tweet</button>
             </li>
         </ul>
     </div>
@@ -79,7 +79,7 @@
     .nav .nav-item {
         padding: 0.6rem;
         border-radius: 50px;
-        margin-bottom: 1rem;
+        margin-bottom: 1.1rem;
     }
 
     .nav .nav-item-logo {
@@ -117,5 +117,11 @@
 
     .nav .nav-item-logo .nav-item-link-logo i {
         font-size: 1.7rem;
+    }
+
+    .nav .nav-item-tweet {
+        display: block;
+        text-align: left;
+        width: 100%;
     }
 </style>
