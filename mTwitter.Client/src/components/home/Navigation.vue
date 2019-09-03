@@ -73,17 +73,19 @@
         float: left;
         clear: both;
         list-style-type: none;
-        transition: all 0.2s;
+        transition: all 0.1s;
     }
 
     .nav .nav-item {
         padding: 0.6rem;
         border-radius: 50px;
+        margin-bottom: 1rem;
     }
 
     .nav .nav-item-logo {
         padding: 0.6rem;
         border-radius: 50%;
+        margin-bottom: 1rem;
     }
 
     .nav .nav-item-logo .nav-item-link-logo {
@@ -99,8 +101,21 @@
         color: var(--dark-color);
     }
 
-    ul li .nav-item-link .nav-item-link-text {
-        margin-left: 1rem;
+    .nav .nav-item .nav-item-link:hover {
+        color: var(--primary-color);
     }
 
+    .nav .nav-item .nav-item-link .nav-item-link-text {
+        margin-left: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .nav .nav-item .nav-item-link i {
+        font-size: 1.3rem;
+    }
+
+    .nav .nav-item-logo .nav-item-link-logo i {
+        font-size: 1.7rem;
+    }
 </style>
