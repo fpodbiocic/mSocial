@@ -3,7 +3,12 @@ import VueRouter from "vue-router";
 
 // Views (components)
 import Landing from "./views/Landing.vue";
+
 import Home from "./views/Home.vue";
+import HomeSidebar from "./components/home/HomeSidebar.vue";
+
+import Explore from "./views/Explore.vue";
+import ExploreSidebar from "./components/explore/ExploreSidebar.vue";
 
 // enables router injection into all child components
 Vue.use(VueRouter);
@@ -19,7 +24,18 @@ const router = new VueRouter({
         {
             path: '/home',
             name: 'home',
-            component: Home
+            components: {
+                default: Home,
+                sidebar: HomeSidebar
+            }
+        },
+        {
+            path: '/explore',
+            name: 'explore',
+            components: {
+                default: Explore,
+                sidebar: ExploreSidebar
+            }
         }
     ]
 });

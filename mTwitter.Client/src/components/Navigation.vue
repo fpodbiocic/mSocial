@@ -56,17 +56,17 @@
 <script>
     export default {
         name: "Navigation"
-    }
+    };
 </script>
 
 <style scoped>
     #navigation {
         width: 20%;
-        border: 1px solid black;
+        /*border: 1px solid black;*/
     }
 
     .nav {
-        border: 1px solid black;
+        /*border: 1px solid black;*/
     }
 
     .nav .nav-item, .nav-item-logo, .nav-item-tweet {

@@ -1,10 +1,8 @@
 ﻿<template>
-    <div class="container">
-        <div id="home">
-            <Navigation />
-            <Posts />
-            <!--<loader v-bind:loading="loading" v-bind:color="loaderColor" v-bind:size="loaderSize"></loader>-->
-        </div>
+    <div id="home">
+        <Header />
+        <Posts />
+        <!--<loader v-bind:loading="loading" v-bind:color="loaderColor" v-bind:size="loaderSize"></loader>-->
     </div>
 </template>
 
@@ -12,14 +10,14 @@
     import { mapState } from "vuex";
 
     // components
+    import Header from "../components/home/Header.vue";
     import Posts from "../components/home/Posts.vue";
-    import Navigation from "../components/home/Navigation.vue";
 
     export default {
         name: 'Home',
         components: {
-            Posts: Posts,
-            Navigation: Navigation
+            Header: Header,
+            Posts: Posts
         },
         data() {
             return {
@@ -56,12 +54,13 @@
                 }
             })
         }
-    }
+    };
 </script>
 
 <style scoped>
     #home{
        display: flex;
-       border: 1px solid black;
+       flex-direction: column;
+       /*border: 1px solid black;*/
     }
 </style>

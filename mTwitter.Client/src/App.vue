@@ -1,12 +1,21 @@
 <template>
     <div id="app">
-        <router-view />
+        <div class="container app-content">
+            <Navigation />
+            <router-view />
+            <router-view name="sidebar" />
+        </div>
     </div>
 </template>
 
 <script>
+    import Navigation from "./components/Navigation.vue";
+
     export default {
-        name: 'App'
+        name: 'App',
+        components: {
+            Navigation: Navigation
+        }
     };
 </script>
 
@@ -192,4 +201,16 @@
         flex-direction: column;
     }
     /*----------------------------*/
+
+    /*----------------------------*/
+    /*App styles*/
+
+    #app {
+    }
+
+    .app-content {
+        display: flex;
+    }
+
+    /*-----------------------------*/
 </style>
