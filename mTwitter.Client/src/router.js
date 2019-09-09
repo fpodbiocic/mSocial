@@ -3,6 +3,9 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
+// Navigation
+import Navigation from "./components/global/Navigation.vue";
+
 // Landing view and components
 import Landing from "./views/Landing.vue";
 
@@ -21,7 +24,8 @@ const router = new VueRouter({
             path: '/home',
             name: 'home',
             components: {
-                default: Home
+                default: Home,
+                navigation: Navigation,
             }
         }
     ]
