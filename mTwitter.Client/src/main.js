@@ -1,10 +1,12 @@
 import Vue from 'vue';
 import App from './App.vue';
+import VueMoment from "vue-moment";
 
 import router from "./router";
 import store from "./store/index";
 
 Vue.config.productionTip = true;
+Vue.use(VueMoment);
 
 // Global components
 import ClipLoader from "vue-spinner/src/ClipLoader.vue";

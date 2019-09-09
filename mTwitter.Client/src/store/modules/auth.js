@@ -1,5 +1,6 @@
 ﻿const state = {
-
+    loading: false,
+    isAuthenticated: true
 };
 
 const mutations = {

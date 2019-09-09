@@ -1,6 +1,12 @@
 ﻿<template>
     <div id="header">
-        <h3>Home</h3>
+        <div class="header-top">
+            <h3>Home</h3>
+        </div>
+        <div class="header-bottom">
+            <i class="far fa-user fa-2x"></i>
+            
+        </div>
     </div>
 </template>
 
@@ -12,10 +18,17 @@
 
 <style scoped>
     #header {
-        padding: 0.6rem;
-        border: 1px solid #e6ecf0;
+        /*border: 1px solid #e6ecf0;*/
+        width: 600px;
     }
 
-    #header h3 {
+    #header .header-top {
+        border-bottom: 1px solid #e6ecf0;
+        padding: 0.6rem 1rem;
     }
+
+        #header .header-bottom {
+            padding: 0.6rem 1rem;
+            border-bottom: 10px solid #e6ecf0;
+        }
 </style>

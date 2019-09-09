@@ -35,7 +35,13 @@
     <Content Include="src\App.vue" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="src\components\home\Navigation.vue">
+    <Content Include="src\components\explore\ExploreSidebar.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\home\Header.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\Navigation.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\components\Home\Post.vue">
@@ -44,13 +50,13 @@
     <Content Include="src\components\home\Posts.vue">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\components\Landing\Footer.vue">
+    <Content Include="src\components\home\HomeSidebar.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\Explore.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\views\Home.vue">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="src\views\Landing.vue">
       <SubType>Code</SubType>
     </Content>
   </ItemGroup>
@@ -60,8 +66,8 @@
     <Folder Include="src\" />
     <Folder Include="src\assets\" />
     <Folder Include="src\components\" />
-    <Folder Include="src\components\landing\" />
     <Folder Include="src\components\home\" />
+    <Folder Include="src\components\explore\" />
     <Folder Include="src\store\" />
     <Folder Include="src\store\modules\" />
     <Folder Include="src\store\mutations\" />

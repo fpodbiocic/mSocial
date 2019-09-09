@@ -1,8 +1,7 @@
 ﻿<template>
     <div id="home">
         <Header />
-        <Posts />
-        <!--<loader v-bind:loading="loading" v-bind:color="loaderColor" v-bind:size="loaderSize"></loader>-->
+        <Posts v-bind:loading="loadingPosts" v-bind:posts="posts" />
     </div>
 </template>
 
@@ -21,12 +20,7 @@
         },
         data() {
             return {
-                loading: false,
-                loaderColor: "#1da1f2",
-                loaderSize: "50px",
-                errors: {
-                    getPosts: {}
-                }
+                
             }
         },
         created() {
@@ -37,18 +31,15 @@
         methods: {
             getPosts: function () {
 
-                this.loading = true;
-                this.$store.dispatch('fetchPosts')
-                    .then(() => this.loading = false)
-                    .catch(error => {
-                        this.errors.getPosts = error;
-                        this.loading = false;
-                    });
+                this.$store.dispatch('fetchPosts');
 
             }
         },
         computed: {
             ...mapState({
+                loadingPosts: function (state) {
+                    return state.posts.loading;
+                },
                 posts: function (state) {
                     return state.posts.posts;
                 }
@@ -58,9 +49,9 @@
 </script>
 
 <style scoped>
-    #home{
-       display: flex;
-       flex-direction: column;
-       /*border: 1px solid black;*/
+    #home {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e6ecf0;
     }
 </style>

@@ -107,9 +107,9 @@ namespace mTwitter.API.Services
                 Comments = 0,
                 Retweets = 0,
                 IsDeleted = false,
-                ModifiedBy = "Marko Vidaković",
+                ModifiedBy = "John Doe",
                 ModifiedOn = DateTime.Now,
-                CreatedBy = "Marko Vidaković",
+                CreatedBy = "John Doe",
                 CreatedOn = DateTime.Now
             };
 

@@ -1,9 +1,13 @@
 ﻿// Mutations
-import { SET_POSTS, SET_POST } from "../mutations/posts-mutations";
+import { LOADING, FETCH_POSTS_ERROR, SET_POSTS } from "../mutations/posts-mutations";
 
 const state = {
+    loading: false,
     post: {},
-    posts: []
+    posts: [],
+    errors: {
+        fetchError: null
+    }
 };
 
 // In Vuex, mutations are synchronous transactions:
@@ -12,9 +16,17 @@ const state = {
 // we can use the ES2015 computed property name feature
 // to use a constant as the function name
 const mutations = {
+
+    [LOADING](state, payload) {
+        state.loading = payload;
+    },
     
     [SET_POSTS](state, payload) {
         state.posts = payload;
+    },
+
+    [FETCH_POSTS_ERROR](state, payload) {
+        state.errors.fetchError = payload;
     }
 };
 
@@ -26,29 +38,26 @@ const mutations = {
 const actions = {
     fetchPosts: function (context) {
 
-        return new Promise((resolve, reject) => {
+        let payload;
+        context.commit(LOADING, true);
 
-            fetch('/api/Posts')
-                .then(response => response.json())
-                .then(data => {
-                    let payload = data;
-                    context.commit(SET_POSTS, payload);
-                    resolve();
-                })
-                .catch(error => reject(error));
-
-        });
-
+        fetch('/api/Posts')
+            .then(response => response.json())
+            .then(data => {
+                payload = data;
+                context.commit(SET_POSTS, payload);
+                context.commit(LOADING, false);
+            })
+            .catch(error => {
+                payload = error;
+                context.commit(FETCH_POSTS_ERROR, payload);
+                context.commit(LOADING, false);
+            });
     }
-};
-
-const getters = {
-
 };
 
 export default {
     state,
     mutations,
-    actions,
-    getters
+    actions
 }

@@ -2,7 +2,6 @@
 import VueRouter from "vue-router";
 
 // Views (components)
-import Landing from "./views/Landing.vue";
 
 import Home from "./views/Home.vue";
 import HomeSidebar from "./components/home/HomeSidebar.vue";
@@ -10,17 +9,14 @@ import HomeSidebar from "./components/home/HomeSidebar.vue";
 import Explore from "./views/Explore.vue";
 import ExploreSidebar from "./components/explore/ExploreSidebar.vue";
 
+import Tweet from "./views/Tweet.vue";
+
 // enables router injection into all child components
 Vue.use(VueRouter);
 
 const router = new VueRouter({
     mode: 'history',
     routes: [
-        {
-            path: '/',
-            name: 'landing',
-            component: Landing
-        },
         {
             path: '/home',
             name: 'home',
@@ -36,6 +32,14 @@ const router = new VueRouter({
                 default: Explore,
                 sidebar: ExploreSidebar
             }
+        },
+        {
+            path: '/handle/tweet/:id',
+            name: 'tweet',
+            components: {
+                default: Tweet
+            },
+            props: true
         }
     ]
 });

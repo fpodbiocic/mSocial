@@ -1,20 +1,32 @@
 <template>
     <div id="app">
         <div class="container app-content">
-            <Navigation />
+            <Navigation v-if="isAuthenticated" />
             <router-view />
-            <router-view name="sidebar" />
+            <router-view name="sidebar" v-if="isAuthenticated" />
         </div>
     </div>
 </template>
 
 <script>
+    import { mapState } from "vuex";
+
     import Navigation from "./components/Navigation.vue";
 
     export default {
         name: 'App',
         components: {
             Navigation: Navigation
+        },
+        data() {
+            return {}
+        },
+        computed: {
+            ...mapState({
+                isAuthenticated: function (state) {
+                    return state.auth.isAuthenticated;
+                }
+            })
         }
     };
 </script>
@@ -32,8 +44,12 @@
         --primary-color: #1da1f2;
         --light-color: #fff;
         --dark-color: #000;
+        --retweet-color: #1ad087;
+        --like-color: #ff3855;
         --btn-secondary-hover: rgba(29, 161, 242, 0.1);
         --btn-primary-hover: #1b95e0;
+        --retweet-hover-color: rgba(26, 208, 135, 0.1);
+        --like-hover-color: rgba(255, 56, 85, 0.1);
     }
     /*----------------------------*/
 
