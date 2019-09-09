@@ -11,6 +11,23 @@
         name: 'home',
         components: {
             Posts: Posts
+        },
+        created: function () {
+
+            this.getPosts();
+
+        },
+        data() {
+            return {
+
+            }
+        },
+        methods: {
+            getPosts: function () {
+
+                this.$store.dispatch('fetchPosts');
+
+            }
         }
     }
 </script>
