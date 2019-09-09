@@ -72,7 +72,7 @@ namespace mTwitter.API.Services
                                             CreatedOn = p.CreatedOn
                                         };
 
-            return posts.ToList().OrderBy(p => p.CreatedOn);
+            return posts.ToList().OrderByDescending(p => p.CreatedOn);
         }
 
         public IEnumerable<PostDTO> GetPostsByOwnerId(Guid ownerId)
