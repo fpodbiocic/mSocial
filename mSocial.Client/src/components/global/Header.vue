@@ -3,10 +3,9 @@
         <a-row>
             <a-col :span="5"></a-col>
             <a-col :span="14" class="header-content">
-                <router-link to="/feed" id="logo">
-                    <a-icon type="linkedin" style="color: #c7d1d8; font-size: 2.3rem;" />
-                </router-link>
+                <Logo />
                 <AutoComplete />
+                <Navigation />
             </a-col>
             <a-col :span="5"></a-col>
         </a-row>
@@ -14,12 +13,16 @@
 </template>
 
 <script>
+    import Logo from "./Logo.vue";
     import AutoComplete from "./AutoComplete.vue";
+    import Navigation from "./Navigation.vue";
 
     export default {
         name: "Header",
         components: {
-            AutoComplete: AutoComplete
+            Logo: Logo,
+            AutoComplete: AutoComplete,
+            Navigation: Navigation
         }
     }
 </script>
@@ -27,15 +30,7 @@
 <style scoped>
     #header {
         background: #283e4a;
-        padding: 0.5rem 0;
-    }
-
-    h3 {
-        color: #c7d1d8;
-    }
-
-    #logo {
-        margin-right: 1rem;
+        /*padding: 0.5rem 0;*/
     }
 
     .header-content {

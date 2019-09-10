@@ -36,10 +36,16 @@
     <Content Include="src\App.vue" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="src\components\global\Navigation.vue">
+    <Content Include="src\components\global\AutoComplete.vue">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\components\home\Header.vue">
+    <Content Include="src\components\global\Header.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\global\Logo.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\global\Navigation.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\components\home\HomeSidebar.vue">

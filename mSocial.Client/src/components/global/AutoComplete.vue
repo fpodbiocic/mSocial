@@ -4,7 +4,6 @@
                          dropdownClassName="certain-category-search-dropdown"
                          :dropdownMatchSelectWidth="false"
                          :dropdownStyle="{width: '300px'}"
-                         size="medium"
                          style="width: 100%"
                          placeholder="Search"
                          optionLabelProp="value">
