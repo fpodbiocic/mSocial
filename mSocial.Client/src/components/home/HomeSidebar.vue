@@ -11,7 +11,5 @@
 </script>
 
 <style scoped>
-    #homeSidebar{
-        border: 1px solid black;
-    }
+    
 </style>

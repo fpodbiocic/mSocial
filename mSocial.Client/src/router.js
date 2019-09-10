@@ -3,15 +3,11 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-// Navigation
-import Navigation from "./components/global/Navigation.vue";
-
 // Landing view and components
 import Landing from "./views/Landing.vue";
 
 // Home view and components
 import Home from "./views/Home.vue";
-import HomeSidebar from "./components/home/HomeSidebar.vue";
 
 const router = new VueRouter({
     mode: 'history',
@@ -22,13 +18,31 @@ const router = new VueRouter({
             component: Landing
         },
         {
-            path: '/home',
-            name: 'home',
+            path: '/feed',
+            name: 'feed',
             components: {
                 default: Home,
-                navigation: Navigation,
-                sidebar: HomeSidebar
             }
+        },
+        {
+            path: '/mynetwork',
+            name: 'mynetwork',
+            components: {}
+        },
+        {
+            path: '/jobs',
+            name: 'jobs',
+            components: {}
+        },
+        {
+            path: '/messaging',
+            name: 'messaging',
+            components: {}
+        },
+        {
+            path: '/notifications',
+            name: 'notifications',
+            components: {}
         }
     ]
 });

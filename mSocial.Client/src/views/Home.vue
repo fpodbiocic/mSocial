@@ -5,13 +5,11 @@
 </template>
 
 <script>
-    import Header from "../components/home/Header.vue";
     import Posts from "../components/home/Posts.vue";
 
     export default {
         name: 'home',
         components: {
-            Header: Header,
             Posts: Posts
         },
         created: function () {
@@ -35,7 +33,5 @@
 </script>
 
 <style scoped>
-    #home {
-        border: 1px solid black;
-    }
+    
 </style>
