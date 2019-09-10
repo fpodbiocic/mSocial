@@ -4,7 +4,13 @@ import App from './App.vue';
 import router from "./router";
 import store from "./store/store";
 
+// Ant Design Vue 
+import AntDesignVue from "ant-design-vue";
+import "ant-design-vue/dist/antd.css";
+
 Vue.config.productionTip = true;
+
+Vue.use(AntDesignVue);
 
 new Vue({
     router: router, // inject the rotuer into all child components (available via this.$router in all child components)

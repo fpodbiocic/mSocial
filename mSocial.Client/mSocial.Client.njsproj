@@ -2,15 +2,17 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>mTwitter.Client</Name>
+    <Name>mSocial.Client</Name>
     <RootNamespace>mTwitter.Client</RootNamespace>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>cf180065-d3c4-40cf-98e9-52e6cd9e3028</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
+    <ProjectHome>
+    </ProjectHome>
     <StartupFile>node_modules\@vue\cli-service\bin\vue-cli-service.js</StartupFile>
     <SearchPath>
     </SearchPath>
@@ -32,9 +34,29 @@
     <Content Include="public\favicon.ico" />
     <Content Include="public\index.html" />
     <Content Include="src\App.vue" />
-    <Content Include="src\components\Home.vue" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="src\components\global\Navigation.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\home\Header.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\home\HomeSidebar.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\home\Post.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\home\Posts.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\Home.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\Landing.vue">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dist\" />
@@ -42,10 +64,36 @@
     <Folder Include="src\" />
     <Folder Include="src\assets\" />
     <Folder Include="src\components\" />
+    <Folder Include="src\components\global\" />
+    <Folder Include="src\components\landing\" />
+    <Folder Include="src\components\home\" />
+    <Folder Include="src\services\" />
+    <Folder Include="src\store\" />
+    <Folder Include="src\store\modules\" />
+    <Folder Include="src\store\mutation-types\" />
+    <Folder Include="src\views\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="babel.config.js" />
     <Compile Include="src\main.js" />
+    <Compile Include="src\router.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\services\postsService.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\store\modules\posts.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\store\mutation-types\posts-mutations.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\store\store.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vue.config.js">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

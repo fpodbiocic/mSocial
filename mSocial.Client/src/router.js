@@ -11,6 +11,7 @@ import Landing from "./views/Landing.vue";
 
 // Home view and components
 import Home from "./views/Home.vue";
+import HomeSidebar from "./components/home/HomeSidebar.vue";
 
 const router = new VueRouter({
     mode: 'history',
@@ -26,6 +27,7 @@ const router = new VueRouter({
             components: {
                 default: Home,
                 navigation: Navigation,
+                sidebar: HomeSidebar
             }
         }
     ]

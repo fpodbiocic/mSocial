@@ -1,6 +1,6 @@
 ﻿<template>
     <div id="home">
-
+        <h3>Home</h3>
     </div>
 </template>
 
@@ -35,5 +35,7 @@
 </script>
 
 <style scoped>
-
+    #home {
+        border: 1px solid black;
+    }
 </style>

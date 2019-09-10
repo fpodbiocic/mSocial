@@ -1,6 +1,6 @@
 ﻿<template>
     <div id="navigation">
-
+        <h3>Navigation</h3>
     </div>
 </template>
 
@@ -11,5 +11,7 @@
 </script>
 
 <style scoped>
-
+    #navigation {
+        border: 1px solid black;
+    }
 </style>
