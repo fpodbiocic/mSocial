@@ -1,50 +1,61 @@
 ﻿<template>
     <div id="navigation">
         <div class="menu-item">
-            <router-link to="/feed" class="menu-item-link active">
-                <a-icon type="home" style="font-size: 1.2rem;" />
+            <router-link to="/feed" class="menu-item-link" active-class="active">
+                <a-badge dot>
+                    <a-icon type="home" style="font-size: 1.4rem;" />
+                </a-badge>
                 Home
             </router-link>
         </div>
         <div class="menu-item">
-            <router-link to="/mynetwork" class="menu-item-link">
-                <a-icon type="team" style="font-size: 1.2rem;" />
+            <router-link to="/mynetwork" class="menu-item-link" active-class="active">
+                <a-badge dot>
+                    <a-icon type="team" style="font-size: 1.4rem;" />
+                </a-badge>
                 My Network
             </router-link>
         </div>
         <div class="menu-item">
-            <router-link to="/jobs" class="menu-item-link">
-                <a-icon type="fund" style="font-size: 1.2rem;" />
+            <router-link to="/jobs" class="menu-item-link" active-class="active">
+                <a-badge dot>
+                    <a-icon type="fund" style="font-size: 1.4rem;" />
+                </a-badge>
                 Jobs
             </router-link>
         </div>
         <div class="menu-item">
-            <router-link to="/messages" class="menu-item-link">
-                <a-icon type="message" style="font-size: 1.2rem;" />
+            <router-link to="/messages" class="menu-item-link" active-class="active">
+                <a-badge count="1">
+                    <a-icon type="message" style="font-size: 1.4rem;" />
+                </a-badge>
                 Messaging
             </router-link>
         </div>
         <div class="menu-item">
-            <router-link to="/notifications" class="menu-item-link">
-                <a-icon type="notification" style="font-size: 1.2rem;" />
+            <router-link to="/notifications" class="menu-item-link" active-class="active">
+                <a-badge count="6">
+                    <a-icon type="notification" style="font-size: 1.4rem;" />
+                </a-badge>
                 Notifications
             </router-link>
         </div>
-        <div class="menu-item">
-            <router-link to="/notifications" class="menu-item-link">
-                <a-icon type="user" style="font-size: 1.2rem;" />
-                Me
-            </router-link>
+        <div class="menu-item-user">
+            <NavigationDropdown />
         </div>
     </div>
 </template>
 
 <script>
+    import NavigationDropdown from "./NavigationDropdown.vue";
+
     export default {
         name: "Navigation",
+        components: {
+            NavigationDropdown: NavigationDropdown
+        },
         data() {
             return {
-                active: 'home'
             }
         }
     }
@@ -52,22 +63,32 @@
 
 <style scoped>
     #navigation {
-        margin-left: 9rem;
+        margin-left: 7rem;
         display: flex;
     }
 
     #menu {
     }
 
-    .menu-item {
+    .menu-item, .menu-item-user {
         transition: all 0.2s;
+        padding: 0.8rem 0;
+    }
+
+    .menu-item-user {
+        color: #c7d1d8;
+        cursor: pointer;
+    }
+
+    .menu-item-user a {
+        color: #c7d1d8;
+        text-decoration: none;
     }
 
     .menu-item-link {
-        display: flex;
-        flex-direction: column;
         color: #c7d1d8;
-        padding: 0.3rem 1.2rem;
+        padding: 0.7rem 0.8rem;
+        text-decoration: none;
     }
 
     .menu-item-link:hover {
@@ -83,4 +104,3 @@
         color: #fff;
     }
 </style>
-<a-icon type="money-collect" />
