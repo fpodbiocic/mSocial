@@ -16,43 +16,35 @@
                     </div>
                 </router-link>
             </a-menu-item>
-            <a-menu-item style="text-align: center;">
-                <router-link to="/profile">View profile</router-link>
-            </a-menu-item>
-            <a-menu-divider />
-            <a-menu-item key="1" style="background: #f3f6f8; cursor: default;">
-                <h3>ACCOUNT</h3>
+            <a-menu-item key="1" style="text-align: center;">
+                <router-link to="/profile"><a-icon type="idcard" /> View profile</router-link>
             </a-menu-item>
             <a-menu-divider />
             <a-menu-item key="2">
                 <router-link to="/settings-and-privacy">
-                    Settings & Privacy
+                    <a-icon type="setting" /> Settings & Privacy
                 </router-link>
             </a-menu-item>
             <a-menu-item key="3">
                 <router-link to="/language">
-                    Language
+                    <a-icon type="font-colors" /> Language
                 </router-link>
-            </a-menu-item>
-            <a-menu-divider />
-            <a-menu-item key="4" style="background: #f3f6f8; cursor: default;">
-                <h3>MANAGE</h3>
             </a-menu-item>
             <a-menu-divider />
             <a-menu-item key="5">
                 <router-link to="/posts-and-activity">
-                    Posts & Activity
+                    <a-icon type="form" /> Posts & Activity
                 </router-link>
             </a-menu-item>
             <a-menu-item key="6">
                 <router-link to="/job-posting-account">
-                    Job posting account
+                    <a-icon type="unlock" /> Job posting account
                 </router-link>
             </a-menu-item>
             <a-menu-divider />
-            <a-menu-item key="6">
+            <a-menu-item key="7">
                 <router-link to="/signout">
-                    Sign out
+                    <a-icon type="logout" /> Sign out
                 </router-link>
             </a-menu-item>
         </a-menu>
