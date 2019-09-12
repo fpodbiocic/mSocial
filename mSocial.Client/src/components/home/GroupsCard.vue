@@ -1,5 +1,5 @@
 ﻿<template>
-    <a-card id="groups-card" v-bind:loading="loading" title="Your Groups">
+    <a-card id="groups-card" v-bind:loading="loading" hoverable title="Your Groups">
         <a href="#" slot="extra">
             <a-dropdown :trigger="['click']">
                 <a class="ant-dropdown-link" href="#">
