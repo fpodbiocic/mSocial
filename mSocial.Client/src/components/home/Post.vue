@@ -34,12 +34,12 @@
                     <a-menu slot="overlay">
                         <a-menu-item key="0">
                             <router-link to="/groups/discover">
-                                <a-icon type="link" /> Share in a post
+                                <a-icon type="snippets" /> Share in a post
                             </router-link>
                         </a-menu-item>
                         <a-menu-item key="3">
                             <router-link to="/groups/new">
-                                <a-icon type="stop" /> Send as a private message
+                                <a-icon type="message" /> Send as a private message
                             </router-link>
                         </a-menu-item>
                     </a-menu>
