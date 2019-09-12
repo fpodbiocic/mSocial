@@ -26,7 +26,12 @@
 
 <style>
     #main-content {
-        margin-top: 2rem;
-        border: 1px solid black;
+        margin-top: 3rem;
+        /*border: 1px solid black;*/
+    }
+
+    #app {
+        background: #f5f5f5;
+        height: 100%;
     }
 </style>

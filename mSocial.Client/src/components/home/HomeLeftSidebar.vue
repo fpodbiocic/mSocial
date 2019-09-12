@@ -1,15 +1,29 @@
 ﻿<template>
     <div id="home-left-sidebar">
-        <h3>Left sidebar</h3>
+        <ProfileCard />
+        <HashtagsCard />
+        <GroupsCard />
     </div>
 </template>
 
 <script>
+    import ProfileCard from "./ProfileCard.vue";
+    import HashtagsCard from "./HashtagsCard.vue";
+    import GroupsCard from "./GroupsCard.vue";
+
     export default {
-        name: "HomeLeftSidebar"
+        name: "HomeLeftSidebar",
+        components: {
+            ProfileCard: ProfileCard,
+            HashtagsCard: HashtagsCard,
+            GroupsCard: GroupsCard
+        }
     }
 </script>
 
 <style scoped>
+    #home-left-sidebar {
+    }
 
+    
 </style>

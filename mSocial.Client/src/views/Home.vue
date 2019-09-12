@@ -1,13 +1,13 @@
 ﻿<template>
     <div id="home">
         <a-row>
-            <a-col :lg="6">
+            <a-col :lg="5">
                 <HomeLeftSidebar />
             </a-col>
-            <a-col :lg="12">
+            <a-col :lg="14">
 
             </a-col>
-            <a-col :lg="6">
+            <a-col :lg="5">
                 <HomeRightSidebar />
             </a-col>
         </a-row>
