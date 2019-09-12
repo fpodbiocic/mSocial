@@ -7,14 +7,5 @@
                 changeOrigin: true
             }
         }
-    },
-    css: {
-        loaderOptions: {
-            less: {
-                modifyVars: {
-                    'primary-color': '#1da1f2'
-                }
-            }
-        }
     }
 }

@@ -36,7 +36,10 @@
     <Content Include="src\App.vue" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="src\components\global\AutoComplete.vue">
+    <Content Include="src\components\global\NavigationDropdown.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\global\Search.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\components\global\Header.vue">
@@ -48,13 +51,28 @@
     <Content Include="src\components\global\Navigation.vue">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\components\home\HomeSidebar.vue">
+    <Content Include="src\components\home\CreatePost.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\home\GroupsCard.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\home\HashtagsCard.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\home\HomeLeftSidebar.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\home\HomeRightSidebar.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\components\home\Post.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\components\home\Posts.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\home\ProfileCard.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\views\Home.vue">
