@@ -11,7 +11,6 @@
                             <a-icon type="search" /> Discover groups
                         </router-link>
                     </a-menu-item>
-                    <a-menu-divider />
                     <a-menu-item key="3">
                         <router-link to="/groups/new">
                             <a-icon type="branches" /> Create a new group

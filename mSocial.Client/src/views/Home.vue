@@ -4,8 +4,9 @@
             <a-col :lg="5">
                 <HomeLeftSidebar />
             </a-col>
-            <a-col :lg="14">
-
+            <a-col :lg="14" id="home-main-content">
+                <CreatePost />
+                <Posts />
             </a-col>
             <a-col :lg="5">
                 <HomeRightSidebar />
@@ -49,5 +50,7 @@
 </script>
 
 <style scoped>
-    
+    #home-main-content {
+        padding: 0 1.5rem;
+    }
 </style>

@@ -1,6 +1,7 @@
 ﻿<template>
     <div id="posts">
-
+        <Post />
+        <Post />
     </div>
 </template>
 
@@ -16,5 +17,8 @@
 </script>
 
 <style scoped>
-
+    #posts {
+        margin-top: 0.5rem;
+        /*border: 1px solid black;*/
+    }
 </style>
